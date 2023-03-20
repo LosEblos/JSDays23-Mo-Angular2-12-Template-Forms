@@ -1,0 +1,11 @@
+<form *ngIf="todo$ | async as todo" (ngSubmit)="onSubmit(todo)" #form="ngForm">
+  <input type="checkbox" [(ngModel)]="todo.done" name="done" />
+  <input
+    type="text"
+    [(ngModel)]="todo.name"
+    name="name"
+    required
+    minlength="5"
+  />
+  <button [disabled]="form.invalid">Submit!</button>
+</form>
