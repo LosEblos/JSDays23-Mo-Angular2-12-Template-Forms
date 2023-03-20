@@ -1,4 +1,9 @@
-<label >
-  <input type="checkbox" [checked]="todo.done" (change)="markTodoAsDone(todo)">
+<label>
+  <input
+    type="checkbox"
+    [checked]="todo.done"
+    (change)="markTodoAsDone(todo)"
+  />
   <a [routerLink]="todo.id">{{ todo.name }}</a>
 </label>
+<br />
