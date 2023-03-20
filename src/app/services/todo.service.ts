@@ -22,6 +22,7 @@ export class TodoService {
   }
 
   update(todo: Todo) {
+    console.log('TodoService', 'update', todo);
     return this.httpClient.put(`${this.actionUrl}/${todo.id}`, todo);
   }
 
